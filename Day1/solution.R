@@ -11,4 +11,4 @@ for (i in 1:length(input)){
   elf <- elf + input[i]
 }
 print(max(splits))
-print(sum(sort(splits$X49147, decreasing = TRUE)[1:3]))
+print(sum(sort(splits[[1]], decreasing = TRUE)[1:3]))
