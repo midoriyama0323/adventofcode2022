@@ -16,5 +16,4 @@ input$all2 <- Map(all,input$bag2_over)
 nrow(input[input$all1 == TRUE | input$all2 == TRUE,])
 #solution2
 input$any1 <- Map(any,input$bag1_over)
-input$any2 <- Map(any,input$bag2_over)
-nrow(input[input$any1 == TRUE | input$any2 == TRUE,])
+nrow(input[input$any1 == TRUE,])
