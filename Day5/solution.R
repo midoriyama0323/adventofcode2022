@@ -33,5 +33,7 @@ for (i in 1:nrow(moves)) {
   input2[[moves[i, 2]]] <- head(input2[[moves[i, 2]]],-moves[i, 1])
   
 }
-paste(unlist(lapply(input, last)), sep = "")
-paste(unlist(lapply(input2, last)), sep = "")
+paste(lapply(input, last), collapse = "")
+#JDTMRWCQJ
+paste(lapply(input2, last), collapse = "")
+#VHJDDCWRD
