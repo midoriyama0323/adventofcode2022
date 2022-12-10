@@ -33,6 +33,8 @@ for (i in seq(20, length(cycle), 40)) {
   
 }
 
+solution1
+
 screen <- split(cycle, cut(seq_along(cycle), 6, labels = FALSE))
 
 row1 <- row2 <- row3 <- row4 <- row5 <- row6 <- ""
@@ -40,7 +42,7 @@ for (i in 1:length(screen)) {
   
   for (j in 1:length(screen[[1]])) {
     
-    if (between(screen[[i]][[j]][1],j-1,j+1)) {
+    if (between(screen[[i]][[j]][1],j-2,j)) {
       
       assign(paste("row", i, sep = ""), paste(get(paste("row", i, sep = "")), "#", sep = "" ))
       
@@ -51,4 +53,6 @@ for (i in 1:length(screen)) {
     }
     
   }
+  
+  print(get(paste("row",i, sep = "")))
 }
