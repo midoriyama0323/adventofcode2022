@@ -7,20 +7,16 @@ for (i in 1:nrow(input)) {
   switch(input$V1[i],
          
          "noop" = {
-           cycle_start <- x
-           cycle_end <- x
            
-           cycle <- c(cycle, list(c(cycle_start, cycle_end)))
+           cycle <- c(cycle, list(c(x, x)))
            
          },
          
          {
-           cycle_start <- x
-           cycle_end <- x + input$V2[i]
-           x <- cycle_end
+
            cycle <-
-             c(cycle, list(c(cycle_start, cycle_start)), list(c(cycle_start, cycle_end)))
-           
+             c(cycle, list(c(x, x)), list(c(x, x + input$V2[i])))
+           x <- x + input$V2[i]
            
          })
   
